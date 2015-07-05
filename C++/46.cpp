@@ -33,7 +33,7 @@ public:
 
     void backTracking(vector<vector<int>>& res, vector<int>& nums, int begin)
     {
-        if (begin == nums.size()) {
+        if (begin == nums.size()-1) {
             res.push_back(nums);
             return;
         }

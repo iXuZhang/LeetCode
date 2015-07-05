@@ -18,23 +18,25 @@ struct Student
     char addr[30];
 }student1={10001, "Zhang Xin", 'M', 19, 90.5, "Shanghai"};
 
-void backTracking(vector<int>::iterator i, vector<vector<int>>& res, vector<int>& current, const vector<int>& candidates, const int target){
-    if(!target) res.push_back(current);
-    else if(target>0)
-        for(; i != candidates.end(); ++i){
-            current.push_back(*i);
-            cout<<*i<<endl;
-            backTracking(i, res, current, candidates, target-*i);
-            current.pop_back();
+    
+    string backTracking(string& res, string& curr, int m, int& n, int& k){
+        if(m==n)
+            if(--k==0){
+                res = curr;
+                n = 0;
+            }
+        for(int i=m; i<n; i++){
+            swap(curr[m],curr[i]);
+            backTracking(res,curr,m+1,n,k);
+            swap(curr[m],curr[i]);
         }
-}
+    }
 
 int main(){
-        vector<int> candidates = {2,3};
-        int target = 5;
-        vector<int> current;
-        vector<vector<int>> res;
-        sort(candidates.begin(),candidates.end());
-        backTracking(candidates.begin(), res, current, candidates, target);
-        return 0;    
+    int n=0,k=0;
+    string res, curr;
+    for(int i=1;i<=n;i++) curr.push_back(char(i+'0'));
+    backTracking(res, curr, 0, n, k);
+    cout<<res<<endl;
+    return 0;    
 }
