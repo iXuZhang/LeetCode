@@ -1,27 +1,36 @@
 #include <iostream>
-#include <set>
 #include <string>
 #include <vector>
-#include <math.h>
-#include <numeric>
-#include <algorithm>
 
 using namespace std;
 
-struct Student
-{
-    int num;
-    char name[20];
-    char sex;
-    int age;
-    float score;
-    char addr[30];
-}student1={10001, "Zhang Xin", 'M', 19, 90.5, "Shanghai"};
 
-    
+enum INPUT {X, Y, Z}; 
+
+void backTracking(vector<string>& res, vector<string>& nums, string& curr, int pos){
+	if(pos==3) res.push_back(curr+")");
+	for(int i=0;i<nums[pos].size();i++){
+		curr.push_back(nums[pos][i]);
+		backTracking(res,nums,curr,pos+1);
+		curr.pop_back();
+	}
+}
+
+vector<string> test(int M=0, int para1=-1, int para2=-1, int para3=-1 ){
+    string input = "XYZ";
+    vector<string> res, nums;
+    para1==-1 ? nums.push_back(input):nums.push_back(input.substr(para1,1));
+    para2==-1 ? nums.push_back(input):nums.push_back(input.substr(para2,1));
+    para3==-1 ? nums.push_back(input):nums.push_back(input.substr(para3,1));
+    string curr = "func(";
+    backTracking(res,nums,curr,0);
+    if(!M) return res;
+    curr = res[M-1];
+    return {curr};
+}
+
 int main(){
-          
-    int res = (5>2?1:2) + 5>2?3:4;
-    cout<<res<<endl;
-    return 0;    
+	vector<string> res = test(0,-1,0,-1);
+	for(auto i = res.begin(); i!= res.end(); ++i) cout<< *i<<endl;
+	return 0;
 }
