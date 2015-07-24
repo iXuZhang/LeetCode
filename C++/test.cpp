@@ -30,9 +30,16 @@ vector<string> test(int M=0, int para1=-1, int para2=-1, int para3=-1 ){
 }
 
 int main(){
-	vector<int> test;
-    int i=0;
-    while(i<test.size()) cout<<"xxx"<<endl;
-	cout<<"yyy"<<endl;
+    int n = 3;
+    vector<int> result = { 0,1,2 };
+    int t = 1;
+    //for(int i = 0; i<n; i++) {
+    auto k = result.rend();
+        for(auto j = result.rbegin(); j != k; j++){
+            result.push_back(10);
+            cout<<*j<<endl;
+        }
+        t <<= 1;
+    //}
     return 0;
 }

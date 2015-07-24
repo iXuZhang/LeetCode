@@ -34,11 +34,10 @@ public:
 */
 //Version 3 O(n)without using extro memory - Fast - Bit Manipulation XOR
     int singleNumber(vector<int>& nums) {
-        if(nums.empty()) return 0;
-        int first = nums[0];
-        for(int i = 1; i<nums.size();i++) {
-            first = first ^ nums[i];
-        }
-        return first;
+        //if(nums.empty()) return 0;
+        int single = 0; // 0^num = num
+        for(int n : nums)
+            single ^= n;
+        return single;
     }    
 };
