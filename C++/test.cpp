@@ -4,42 +4,40 @@
 
 using namespace std;
 
-
-enum INPUT {X, Y, Z}; 
-
-void backTracking(vector<string>& res, vector<string>& nums, string& curr, int pos){
-	if(pos==3) res.push_back(curr+")");
-	for(int i=0;i<nums[pos].size();i++){
-		curr.push_back(nums[pos][i]);
-		backTracking(res,nums,curr,pos+1);
-		curr.pop_back();
-	}
+int getKth(const vector<int>& nums1, int begin1, const vector<int>& nums2, int begin2, int k, int m, int n){
+    if (begin2 == n ) 
+        return nums1[begin1 + k - 1];
+    if (begin1 == m )
+        return nums2[begin2 + k - 1];
+    if (k == 1)
+        return min(nums1[begin1], nums2[begin2]);
+    if(k>10) return 0;
+    int i = min(m, begin1 + k / 2); 
+    int j = min(n, begin2 + k / 2);
+        cout<<"k = "<<k <<endl;
+        cout<<"i = "<<i<<endl;
+        cout<<"j = "<<j<<endl;
+        cout<<"begin1 = "<<begin1<<endl;
+        cout<<"begin2 = "<<begin2<<endl;
+    if (nums1[i - 1 ] > nums2[j - 1])
+        return getKth(nums1, begin1, nums2, begin2 + j, k - j + begin2, m, n);
+    else
+        return getKth(nums1, begin1 + i, nums2, begin2, k - i + begin1, m, n);
+    return 0;
 }
-
-vector<string> test(int M=0, int para1=-1, int para2=-1, int para3=-1 ){
-    string input = "XYZ";
-    vector<string> res, nums;
-    para1==-1 ? nums.push_back(input):nums.push_back(input.substr(para1,1));
-    para2==-1 ? nums.push_back(input):nums.push_back(input.substr(para2,1));
-    para3==-1 ? nums.push_back(input):nums.push_back(input.substr(para3,1));
-    string curr = "func(";
-    backTracking(res,nums,curr,0);
-    if(!M) return res;
-    curr = res[M-1];
-    return {curr};
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int m = nums1.size();
+        int n = nums2.size();
+        int left = (m + n + 1) >> 1;
+        int right = (m + n + 2) >> 1;
+        return (getKth(nums1, 0, nums2, 0, left,m,n) + getKth(nums1, 0, nums2, 0, right,m,n))/2.0;
 }
 
 int main(){
-    int n = 3;
-    vector<int> result = { 0,1,2 };
-    int t = 1;
-    //for(int i = 0; i<n; i++) {
-    auto k = result.rend();
-        for(auto j = result.rbegin(); j != k; j++){
-            result.push_back(10);
-            cout<<*j<<endl;
-        }
-        t <<= 1;
-    //}
+    vector<int> nums1 = {1,1,1,1};
+    vector<int> nums2 = {1,1,1,1};
+    findMedianSortedArrays(nums1,nums2);
     return 0;
 }
+
+
