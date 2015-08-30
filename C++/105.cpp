@@ -42,18 +42,21 @@ public:
     // Recursive Solution
     // divide nodes into left and right
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        return makeTree(preorder, inorder, 0, preorder.size()-1, 0, inorder.size()-1);
+        map<int,int> table;
+        for(auto i=0; i!= inorder.size(); i++) table[inorder[i]] = i;
+        return makeTree(preorder, 0, preorder.size()-1, 0, table);
     }
     
     private:
-    TreeNode* makeTree(vector<int>& preorder, vector<int>& inorder, int prefront, int preback, int infront, int inback) {
-        if(prefront > preback) return NULL;
-        int Target = preorder[prefront];
-        int pos = infront;
-        while( Target != inorder[pos]) pos++;
-        TreeNode* node = new TreeNode(Target);
-        node->left = makeTree(preorder, inorder, prefront + 1, preback - (inback - pos), infront, pos-1);
-        node->right = makeTree(preorder, inorder, preback - (inback - pos) + 1, preback, pos+1, inback);
+    TreeNode* makeTree(vector<int>& preorder, int front, int back, int mark, map<int,int> &table) { 
+        // map<int,int> &table, without &, time limited Exceed!!!
+        // mark the begin of a new vector of inorder, to calcuate the number of nodes of left tree
+        if(front > back) return NULL;
+        int target = preorder[front];
+        int pos = table[target];
+        TreeNode* node = new TreeNode(target);
+        node->left = makeTree(preorder, front + 1, front + pos - mark,  mark, table);
+        node->right = makeTree(preorder, front + pos - mark + 1, back,  pos + 1, table);
         return node;
     }
 };
