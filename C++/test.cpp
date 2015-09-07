@@ -33,9 +33,16 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         return (getKth(nums1, 0, nums2, 0, left,m,n) + getKth(nums1, 0, nums2, 0, right,m,n))/2.0;
 }
 
+void passtest(int n){
+    cout<<n<<endl;
+}
+
 int main(){
 	string s = "";
-	cout << stoi(s)<<endl;
+    char x = 'a' + 1;
+	cout << x <<endl;
+    int n = 1;
+    passtest(++n);
     return 0;
 }
 
