@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -38,11 +39,11 @@ void passtest(int n){
 }
 
 int main(){
-	string s = "";
-    char x = 'a' + 1;
-	cout << x <<endl;
-    int n = 1;
-    passtest(++n);
+	map<int,int> table;
+	if(table[0]) cout<<"XXXX"<<endl;
+    string a = "ab";
+    string b = "ba";
+    if(a==b) cout<<"==="<<endl;
     return 0;
 }
 
