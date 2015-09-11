@@ -39,11 +39,9 @@ void passtest(int n){
 }
 
 int main(){
-	map<int,int> table;
-	if(table[0]) cout<<"XXXX"<<endl;
-    string a = "ab";
-    string b = "ba";
-    if(a==b) cout<<"==="<<endl;
+    x = 1;
+    cout<<x<<endl;
+    int x;
     return 0;
 }
 
