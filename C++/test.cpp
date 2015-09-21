@@ -47,11 +47,11 @@ void backTracking(int num, int pos, vector<int>& table, int curr, vector<string>
 }
 
 int main(){
-    int num = 2;
-    vector<string> res;
-    vector<int> table = {100,200,400,800,1,2,4,8,16,32};
-    backTracking(num, 0, table, 0, res);
-    for(string n : res) cout<<n<<endl;
+    string a = "0123";
+    string b = a.substr(5);
+    string c;
+    if(c == b) cout<< "sd"<<endl;
+    cout<<b<<endl;
     return 0;
 }
 

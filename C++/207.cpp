@@ -3,7 +3,7 @@ public:
     /* directed graph
     bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
         vector<unordered_set<int>> graph(numCourses);
-        for(auto n : prerequisites) graph[n.first].insert(n.second); // make it clear
+        for(auto n : prerequisites) graph[n.second].insert(n.first); // make it clear
         vector<bool> toVisit(numCourses, true);
         vector<bool> visited(numCourses, false);
         for(int i = 0; i < graph.size(); i++)
@@ -27,7 +27,7 @@ private:
     // BFS visit every node, calculate indgree, if veryone has at least one indgree, return false
     bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
         vector<unordered_set<int>> graph(numCourses);
-        for(auto n : prerequisites) graph[n.first].insert(n.second); // make a graph
+        for(auto n : prerequisites) graph[n.second].insert(n.first); // make a graph
         vector<int> degrees(numCourses, 0); // indegree for each node
         for(auto neighbors : graph)
             for(int n : neighbors)
