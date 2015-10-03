@@ -47,11 +47,7 @@ void backTracking(int num, int pos, vector<int>& table, int curr, vector<string>
 }
 
 int main(){
-    string a = "0123";
-    string b = a.substr(5);
-    string c;
-    if(c == b) cout<< "sd"<<endl;
-    cout<<b<<endl;
+ 
     return 0;
 }
 
