@@ -19,10 +19,9 @@ public:
                nodes.push(curr);
                curr = curr->left;
             } 
-            curr = nodes.top();
+            res.push_back(nodes.top()->val);
+            curr = nodes.top()->right;
             nodes.pop();
-            res.push_back(curr->val);
-            curr = curr->right;
         }
         return res;
     }
