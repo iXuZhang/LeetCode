@@ -1,4 +1,3 @@
-// Unique Word Abbreviation
 class ValidWordAbbr {
 public:
     // ["dog"],isUnique("dig"),isUnique("dug"),isUnique("dag"),isUnique("dog"),isUnique("doge")
@@ -8,7 +7,7 @@ public:
             int n = s.size();
             string key =  n > 2 ? s[0] + to_string(n-2) + s[n-1] : s;
             if(table.count(key) == 0) table[key] = s;
-            else table[key] = "";
+            else if(s != table[key]) table[key] = "";
         }
     }
 
