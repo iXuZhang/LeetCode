@@ -4,31 +4,24 @@ public:
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> res;
         vector<string> curr(n,string(n,'.'));
-        helper(res, curr, 0);
+        bool col[n] = {false}, d1[2*n-1] = {false}, d2[2*n-1] = {false};
+        helper(res, curr, col, d1, d2, 0, n);
         return res;
     }
 
 private:
-    void helper(vector<vector<string>>& res, vector<string>& curr, int i){
-        if(i == curr.size()){
+    void helper(vector<vector<string>>& res, vector<string>& curr, bool *col, bool *d1, bool *d2, int i, int& n){
+        if(i == n){
             res.push_back(curr);
             return;
         } 
         for(int j = 0; j < curr.size(); j++)
-            if(isValid(curr,i,j)){
+            if(col[j] == false && d1[i-j+n-1] == false && d2[i+j] == false){
+                col[j] = d1[i-j+n-1] = d2[i+j] = true;
                 curr[i][j] = 'Q';
-                helper(res, curr, i+1);
+                helper(res, curr, col, d1, d2, i+1, n);
                 curr[i][j] = '.';
+                col[j] = d1[i-j+n-1] = d2[i+j] = false;
             }
-    }
-    
-    bool isValid(vector<string>& curr, int i, int j){
-        for(int k = i-1; k >= 0; k--)
-            if(curr[k][j] == 'Q') return false;
-        for(int m = i-1, n = j-1; m >= 0 && n >= 0; m--, n--)
-            if(curr[m][n] == 'Q') return false;
-        for(int m = i-1, n = j+1; m >= 0 && n < curr.size(); m--, n++)
-            if(curr[m][n] == 'Q') return false;
-        return true;
     }
 };
