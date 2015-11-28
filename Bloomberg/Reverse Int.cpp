@@ -19,7 +19,7 @@ int reverseInt(long input){
 		input /= 10;
 	}
 	res *= sign;
-	if(res > INT_MAX || res < INT_MIN) throw invalid_argument("Overflow");
+	if(res > INT_MAX || res < INT_MIN) throw overflow_error("Overflow");
 	return res;
 }
 
@@ -29,7 +29,7 @@ int main(){
 	try{
 		cout<< reverseInt(INT_MAX) << endl;
 	} 
-	catch(invalid_argument& e){
+	catch(const overflow_error & e){
 		cout<< e.what() << endl;
 		return 0;
 	}
