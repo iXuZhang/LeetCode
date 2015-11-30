@@ -1,5 +1,5 @@
 /*
-	实现一个带有+，-，x, /，（）的计算器
+	implement a calculator with +，-，x, /，（)
 */
 
 #include <iostream>
