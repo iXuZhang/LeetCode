@@ -1,9 +1,6 @@
 /*
-海量live stream的数字，求median
+    Find Median from Data Stream
 */
-
-key:
-maximum heap and minimum heap
 
 class MedianFinder {
 public:
@@ -37,3 +34,8 @@ private:
     priority_queue<int> max_heap;
     priority_queue<int, vector<int>, greater<int>> min_heap;
 };
+
+// Your MedianFinder object will be instantiated and called as such:
+// MedianFinder mf;
+// mf.addNum(1);
+// mf.findMedian();

@@ -24,7 +24,7 @@ int calculate(string &s){
 			curr = 0;
 		}
 		else if(c == '*'||c == '/'){
-
+			if
 		}
 		else if(c == '('){
 			numbers.push(curr);
