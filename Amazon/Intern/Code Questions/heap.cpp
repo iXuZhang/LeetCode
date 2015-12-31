@@ -27,3 +27,10 @@ chris说他是market组的，大致意思就是给客户提供deal，然后问�
 
 5.把 arbitrary 个 sorted array merge 成一个sorted array! 
 开始没有理解清楚arbitrary， 原来就是给将 K个sorted array merge 成一个sorted array!
+
+
+6.2nd largest number in array
+follow up: kth largert number
+follow up: 把输入的数组改为iterator
+每一个的时间 空间复杂度
+写几个test cases
