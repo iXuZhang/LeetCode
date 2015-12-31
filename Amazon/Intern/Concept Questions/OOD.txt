@@ -1,0 +1,2 @@
+OOD 
+有个Shape父类，设计Circle, Rectangle, Square…子类. 畅所欲言就好了，主要考继承和多态.

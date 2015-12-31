@@ -1,0 +1,4 @@
+abstract class vs interface
+什么时候用哪个
+
+interface vs class

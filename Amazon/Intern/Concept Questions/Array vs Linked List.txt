@@ -1,0 +1,11 @@
+Array vs Linked List
+Advantage of Linked List over array
+(1) The size of Linked List is dynamic, and the size of array is fixed.
+(2) Insertion and Deletion time is constant. Array O(n).
+
+Drawbacks of Linked List compared with array
+(1) Access by Index is not allowed.
+(2) Use more space to store the address of the next node.
+
+
+什么时候用linked list，什么时候用vector?

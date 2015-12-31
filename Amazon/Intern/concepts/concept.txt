@@ -29,7 +29,7 @@ regular expression for phone numbers(\d{3}\-\d{3}\-\d{4})
 
 // 15. interface
 
-16. why amazon
+// 16. why amazon
 
 // 17. hashtable, hash function, collision
 

@@ -1,0 +1,22 @@
+Hash
+
+1.实现方式
+2.tree 和 list的有什么区别
+3.hashtable的冲突处理
+
+
+hashset， treeset 和BST这些数据结构
+
+
+最后一个是查字典。问一个word是否在字典里。面试官先说字典里所有word存在一个array里(听到这里就想到后面会follow了)， 之后，(果然) 问所有没有什么可以提高的方法。于是就是就hashtable了。问了一下复杂度，怎么解决collision。 
+
+hashmap的insert 和 get 各自是什么复杂度
+
+Implementation of HashTable
+
+
+ 给你一个novel，输出单词出现的次数； 曰： hashmap，unordered_map； 
+ follow up: 为什么用unordered_map不用map？ 曰：不需要排序； 
+ follow up: 时间复杂度多少？hash的O(1)， 题目O(n)
+ follow up: 那hash的最坏情况下是多少？ 曰：说最坏的话要看collision的strategy了， open address: O(hash 的size()); linked list: 最长的list的长度；
+ follow up: 不用hash，用树结构怎么做？曰：前缀树！然后解释了下
