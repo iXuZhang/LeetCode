@@ -1,6 +1,0 @@
-behavior questions
-
-1.Deadline vs quality
-
-
-2.弄明白问题，在开始做项目。还是先直接作出一个原型来。
