@@ -1,0 +1,4 @@
+OOD polymorphism
+what is good oo design
+
+多态概念，小哥说benefit呢

@@ -20,3 +20,8 @@ Implementation of HashTable
  follow up: 时间复杂度多少？hash的O(1)， 题目O(n)
  follow up: 那hash的最坏情况下是多少？ 曰：说最坏的话要看collision的strategy了， open address: O(hash 的size()); linked list: 最长的list的长度；
  follow up: 不用hash，用树结构怎么做？曰：前缀树！然后解释了下
+
+
+说到了HashTable的时候他开始追问细节，什么是hash function，复杂度，以及为什么是O(1)，最坏情况下又会怎样。
+
+hashset，hashtable插入时间复杂度，什么时候是worst case

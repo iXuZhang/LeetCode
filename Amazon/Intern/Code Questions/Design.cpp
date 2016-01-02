@@ -7,7 +7,7 @@ Design
 
 
 
-2. design a parking lot
+2. design a parking lot系统
 
 
 
@@ -28,3 +28,14 @@ follow up是参数改为Object，判断是不是equals。要先判断Object的cl
 
 
 5.Design BlackJack Card Game
+ 设计一个deck类和card类.card不需要operation, deck需要有shuffle和另一个类似于pop的method去操作一个card的collection.
+ 貌似这題crack code interview里面有
+
+6.Design 设计一个飞机场，要求有合适的指挥调度系统，要求写有哪些类，哪些方法
+
+
+7.说有一个retailer,想keep record顾客的喜好，三个class，teacher, student, mother,然后让设计class。
+还加问了一个如果想给既是teacher又是mother的人给个discount怎么设计
+
+
+8.餐馆预约系统 

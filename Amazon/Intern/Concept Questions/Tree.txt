@@ -6,3 +6,8 @@ Tree
 
 
 4. Definition of Binary Search Tree
+
+
+之后问了BSTinsert时间复杂度，避免worst case用什么结构
+
+什么是tree，什么时候用到tree

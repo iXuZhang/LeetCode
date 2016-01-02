@@ -1,0 +1,18 @@
+stack
+
+1.what is a stack?
+LIFO
+2.how do you implentment it in easist way
+vector push_back, pop_back
+3.不用vector,用array可以吗？
+可以，但是超过size，就要copy
+4.动态的给memory size
+linked list
+5.怎样delete
+pop tail， and update new tail， double linked list没问题
+6.如果不能用double linked list？
+push时候放在head，pop时候也是delete head；
+7.知道什么是queue吗？
+FIFO
+8怎么用queue实习stack
+可以用一个queue实现。
