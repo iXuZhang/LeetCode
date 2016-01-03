@@ -34,3 +34,8 @@ follow up: kth largert number
 follow up: 把输入的数组改为iterator
 每一个的时间 空间复杂度
 写几个test cases
+
+
+7.浩瀚的宇宙如此美丽，天空中繁星点点。给你一堆星星，找到离地球最近的那K颗。”（没错，他当时就是这样问我的，
+问一个 top K elements 要不要这么浮夸…）
+用的 max heap，

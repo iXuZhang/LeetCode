@@ -10,3 +10,11 @@ follow up说“abc”{“abc”}这样不行 就是必须字母外要有括号 �
 说完又问我如何简化, 我也看不出来. 然后他说可以在最后直接return stack.isEmpty(); 
 接着又问我还能怎么简化, 在提示下写出了开始的时候判断输入字符数. 字符数应该是even number.
 
+4.
+Can you write a function to detect whether brackets in a string are well-formed?
+（跟validParentheses很像）
+
+         {ab} well
+        {{bc}} well. 
+         {]b[} not well
+

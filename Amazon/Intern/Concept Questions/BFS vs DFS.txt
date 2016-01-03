@@ -3,3 +3,5 @@ BFS vs DFS
 时间复杂度
 空间复杂度
 区别
+
+直接问DFS和BFS的区别，问time complexity 为什么tree的时间复杂度是O（n）n是树的结点数，而不包括边数edges，这个我当时没有想到说parent和child的关系，只是说graph matters在tree里面不用考虑

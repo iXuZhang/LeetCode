@@ -1,3 +1,10 @@
 heap和BST各自的特性
 他让说什么时候用heap 什么时候用BST 
 其实他是想让我说heap很容易get最小值或者最大值，BST得traverse的这个性质
+
+top k numbers
+Priority queue
+
+how to implement?
+insert get time complexity?
+O(k) space? -- queue of length k -- how to add elements?

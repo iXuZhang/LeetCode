@@ -90,3 +90,22 @@ public static int Distance(String[] words, String word1, String word2) {
 补充内容 (2015-3-22 01:28):
 res = Math.min(Math.abs(index1 - index2), res);
 
+10.给两个string,一个needle, 一个target,在target里面找substring, 是needle的任何permutation。
+感觉和leetcode Substring with Concatenation of All Words 差不多，
+只不可以把needle看做是 a list of character，我一开始没反应过来，给的时间复杂度O(nm)的算法
+后来在他提示下才想出了O(n)的解.
+
+11.
+1-1000个数放到一个size为1000的array，怎么判断有没有duplication。我说了三个方法。
+然后开始follow up，说不用hashmap 让我只用Array做这个题，我才理解是让我用array代替hashmap
+然后又开始follow up，说如果是1-10billon 怎么办，内存不够。
+我突然明白他了，就说用bitset来做。他说对，然后又问用bitset需要多少空间。
+傻逼了，算错了应该是40/32. 楼主算成4/32, 被印度哥鄙视了，他说10个billlon int 是40个GB，
+1GB = 1 billion byte
+ 
+
+12.给一个大的文件，里面有不少的ipaddress，写个程序统计一下不同ip出现的次数，于是又给出了看家本领hashmap，
+然后小哥又follow up了一下，问能不能得到的结果里是按次数从小到大排好序的，有个数据结构叫treemap的可以一边放一遍排序来着
+
+
+13.Merge K sorted array

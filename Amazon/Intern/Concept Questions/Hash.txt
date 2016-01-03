@@ -12,6 +12,11 @@ hashset， treeset 和BST这些数据结构
 
 hashmap的insert 和 get 各自是什么复杂度
 
+这题结束后 问了我关于hashtable的问题，让我解释hashtable的definition 和 runtime，
+然后还让我 用 pseudocode 写了 hashtable的 put 和 get，
+并且让我写 collision的处理。
+这里稍微有些勉强， 因为 并没有强力复习collision。
+
 Implementation of HashTable
 
 
@@ -25,3 +30,9 @@ Implementation of HashTable
 说到了HashTable的时候他开始追问细节，什么是hash function，复杂度，以及为什么是O(1)，最坏情况下又会怎样。
 
 hashset，hashtable插入时间复杂度，什么时候是worst case
+
+. compare time complexity of insert, delete, search of BST, hashtable
+what is hashmap and when to use hashmap, also time complexity. 
+hashcode的公式
+
+我数据多用binary tree 太慢咋办，我跟他讲了n-ary tree，并在他的引导下又说了hashmap。因为他要问我关于hashmap的复杂度，collision等问题，我还多跟他聊了hashmap满的时候的情况。

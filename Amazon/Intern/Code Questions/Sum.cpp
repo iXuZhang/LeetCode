@@ -1,6 +1,28 @@
 Sum
 
-1. two sum two sum原版...稍微演了一下，各种complexity的算法都说了一遍...
+1. two sum two sum原版...稍微演了一下，这个2 sum变种是输出所有的pair各种complexity的算法都说了一遍...
+一个2 sum，先问判断有没有，然后问如何返回所有的Pair，deduplicate
+2sum, 找所有的pair, 所有可能的case
+
+第二题coding 2sum，用hashmap存结点，开始没有考虑一种情况就是(1,2,3) target = 5 会输出(2,3) (3,2) 
+要限制在map找结点的时候只能往后面找，不能再往前找了
+follow up： 问duplicate怎么办（3，3，2，1，4） target = 5 要两个pairs都输出，
+我就说按照我现在这种hashmap本来都不允许duplicate 存都存不进来，但是他要实现可以记录如果有重复，
+然后问他能不能用additional 数据结构存，他说可以，然后说可以用array，这个地方真的傻了，
+我说用array存每个number出现的次数，然后让写代码，不知道为什么脑袋僵了把num当成index在存，
+他立马说要是我只有四个数（4，3，1000，1） 你这个不是要arraysize是1000，我说是的，这种不work，
+我要换成别的存，要hashmap，他说我正想说这个下一个
+
+
+后来就开始问不要additional data structure的解法，答用两个指针一前一后，遍历，
+他都没听完就开始问running time然后就开始问3 sum，
+我说3 sum还是可以用前面2 sum的方法来求，然后问running time，这个题我觉得我没有解释清楚，
+觉得他是因为时间问题就说我知道你知道了，不用解释了。. 
+
+
+two sum of 10， two sum of target，返回true/false
+follow up: 返回下标
+
 2. 3sum
 
 3.给一个array，一个target，返回这个array能不能pair成target的boolean值.

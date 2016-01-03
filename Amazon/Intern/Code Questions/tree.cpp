@@ -32,6 +32,7 @@ head node 就是 b d
 9.写个方法，把一个树保存下来 ， 再写个方法，把树还原回去
 
 10.print tree in vertical order
+print a binary tree in vertical order
 Given a binary tree, print it vertically. The following example illustrates vertical order traversal.
 
           1
@@ -54,5 +55,52 @@ Can we use the TreeMap<Integer, ArrayList<Node>> to store all the nodes using in
 Then use the iterator to output the keyset of the ThreeMap?
 
 11.假设有一棵树，被拆分成了许多条边。问如果给定这些边，如何还原这棵树。
+
+12.binary tree,return the number of nodes with only one child in this tree
+
+
+13.
+这时时间已经过了半小时。于是他说不用写代码，设计个数据结构吧。我说，好==。
+就是做一个书的词汇索引，输入一个String，返回一个List<Integer>表示该词出现的页码。
+于是我说hashmap吧。。他说行，不过可能有什么问题呢？
+他说难道key就不会很多？我说英语词汇表里常用的词其实并不多。他说假设这是个双语词汇翻译字典呢== 我说这样的话key就很多了。
+于是他说好吧，你看能不能用树结构？我说啊啊啊（原来这是他想要的），这样可以用树结构编码词汇表。
+
+
+14.树的Zigzag Level Order。
+
+15.leetcode原题，flat binary tree
+
+16.
+给一个Binary Tree，找出所有和为k的从root 到 leaf的路径
+然后follow up，如果路径可以任何地方结束
+再follow up，如果路径可以任何地方开始任何地方结束。
+
+17
+symmetric tree 递归和非递归实现 Symmetric Tree LeetCode
+
+18leetcode 173 Binary Search Tree Iterator
+
+19二叉树的平衡判断
+
+20.
+给一棵二叉树，定义每个节点的sum为以这个节点为根的所有节点上的数字和。找到一个节点，它的sum离root的sum的一半最近。我写了
+一个遍历两次二叉树的解法，先遍历一遍求每个节点sum，然后再遍历一遍找目标节点。问了时间复杂度，然后问怎么改进。提示说sum是
+逐层递减的。面试的时候有点紧张，思路不太清楚，就说了先判断应该选择哪个孩子，然后从这个孩子开始往下遍历。
+然后他说you get the idea，代码没写完就让问问题了。
+其实应该再判断一下选择这个孩子之后abs(child.sum - half)与abs(parent.sum - half)的关系。
+
+21.
+然后是leetcode的SameTree，判断两个树是不是相同的
+分别用递归和迭代实现出来
+
+22.
+Lowest common Ancestor
+
+23.
+Print path in Binary Tree.
+
+24.
+tree serialization and de-serialization
 
 

@@ -28,8 +28,11 @@ follow up是参数改为Object，判断是不是equals。要先判断Object的cl
 
 
 5.Design BlackJack Card Game
- 设计一个deck类和card类.card不需要operation, deck需要有shuffle和另一个类似于pop的method去操作一个card的collection.
- 貌似这題crack code interview里面有
+BlackJack Game
+Deck design (shuffle) 的问题。follow up 是design a card game with 2 players, each with 5 cards. 
+设计一个deck类和card类.card不需要operation, deck需要有shuffle和另一个类似于pop的method去操作一个card的collection.
+貌似这題crack code interview里面有
+pocket cards design
 
 6.Design 设计一个飞机场，要求有合适的指挥调度系统，要求写有哪些类，哪些方法
 
@@ -39,3 +42,17 @@ follow up是参数改为Object，判断是不是equals。要先判断Object的cl
 
 
 8.餐馆预约系统 
+
+
+9 app to track busses and busstops in a city
+
+10 设计动物园(animal kingdom)
+时间有限，没有太多细节
+Animal做abstract class
+然后Bird， Mammal 继承Animal
+然后Mocking Bird 继承了Bird. Waral 鍗氬鏈夋洿澶氭枃绔�,
+Bird类implement了一个Fly的Interface （这里被调侃了，他说企鹅怎么办。。企鹅是bird但是不会飞，当时有点尴尬。。就说我不知道）
+面试官会让你边设计边在里面添加一些方法和变量，比如Animal可以有weight，habitat什么的~bird可以有羽毛，颜色，飞行姿势等等. 
+
+
+

@@ -9,3 +9,6 @@ Drawbacks of Linked List compared with array
 
 
 什么时候用linked list，什么时候用vector?
+
+ompare time complexity of insert, delete, search of array, list
+when you use arraylist and linkedlist. Time complexity

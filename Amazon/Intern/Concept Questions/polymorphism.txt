@@ -2,3 +2,14 @@ OOD polymorphism
 what is good oo design
 
 多态概念，小哥说benefit呢
+
+多态, 有什么benefit, 然后问了继承, 有什么benefit.
+
+多态是什么 然后问什么是class， object
+
+Process 和 thread的区别
+2. Lock, dead lock. What will happen if there are too many locks in a program...(这个不知该怎么答). 
+3. Design pattern（singleton, factory)
+4. Object and class 区别
+5. Polymorphism
+6. Encapsulation

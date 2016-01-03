@@ -3,3 +3,6 @@ test case
 1.empty
 2.duplicate
 3.overflow
+
+
+会设计怎么样的test case

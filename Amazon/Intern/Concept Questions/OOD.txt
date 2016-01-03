@@ -1,2 +1,4 @@
 OOD 
 有个Shape父类，设计Circle, Rectangle, Square…子类. 畅所欲言就好了，主要考继承和多态.
+
+接下来又问了我怎么理解object-oriented.我跟他讲了讲object怎么回事，还有encapsulation。他觉我没答到点上，问我C++的virtual是怎么回事

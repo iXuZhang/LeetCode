@@ -27,3 +27,18 @@ LZ只知道Map和位操作的两种做法，看着时间也不太够了，于是
 找missing number， leetcode变形题，从x到y的范围找missing的数，要求用logn的时间复杂度。
 之前leetcode刷题tag里都没有提示这个做法，就没想，
 面试官要求logn我才想到用binary search，根据中间点与预期中间点的大小判断在左边还是右边。
+
+
+4.
+search in increasing and then decreasing array
+
+
+5.
+给一个数组[a][b][c][d]找到第一个brokencode
+
+擦，什么意思，不懂啊，然后就各种纠结，各种argue，求解释。后来纠结了半天终于明白了（已经过了10多分钟了）
+其实就是给一个sorted array 0 0 0 1 1 1 1 然后找出第一个为1 的数
+然后由于被印度哥们折磨的要死，所以瞬间紧张了，不过还是淡定的说出了，binary search的解法
+擦，我也是醉了。估计要跪就跪在这里了……
+写完后，印度哥们给出了三个case，测试，结果是过了。之后讨论cornercase，
+我说第一个情况是array为空，要返回null或者抛出exception，然后就是比如数组全0的时候，我说可以让index = MAX_VALUE，如果BS之后还是这个值就抛出异常（此时印度哥们终于说了句awesome）……

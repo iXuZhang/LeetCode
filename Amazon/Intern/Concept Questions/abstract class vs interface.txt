@@ -2,3 +2,9 @@ abstract class vs interface
 什么时候用哪个
 
 interface vs class
+
+difference of interface and abstruct class,
+ when to use interface, when to use abstruct class
+
+
+ orerride vs overload
