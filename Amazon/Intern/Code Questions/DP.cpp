@@ -14,6 +14,12 @@ Given an integer n, write a function to return the Nth number in the Fibonacci s
 我说现在应该是O(n)了
 
 Fibonacci return小于M的最后N个数，然后问了一下优化，
+nth fibonacci (recursion, dp)
+
+
+第一个是输出个斐波那契数列，很快写完了，然后follow up如果那个数N很大，如何处理，
+当时知道分开处理，但脑子有些乱，说能说出来，代码老写乱了。
+
 
 斐波那契数列：我先写了个f[n]=f[n-1]+f[n+1]的
 follow up1: 空间复杂度太高，换个低的－－然后就换了那个用几个temp存之前的值的，space 变成了Constant

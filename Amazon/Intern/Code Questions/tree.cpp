@@ -67,7 +67,7 @@ Then use the iterator to output the keyset of the ThreeMap?
 于是他说好吧，你看能不能用树结构？我说啊啊啊（原来这是他想要的），这样可以用树结构编码词汇表。
 
 
-14.树的Zigzag Level Order。
+14.树的Zigzag Level Order。 Binary Tree Zigzag Level Order Traversal(高频)
 
 15.leetcode原题，flat binary tree
 
@@ -103,4 +103,20 @@ Print path in Binary Tree.
 24.
 tree serialization and de-serialization
 
+25.
+Coding: 给一个树，输出所有的 Path Sum
+
+
+26.
+How do you serialize a 3-ary tree?
+看到就傻眼。这辈子也没deal with过3-ary tree。。
+想起leetcode上似乎有binary tree的seralize之法，是combine preorder和inorder traversal, 
+于是满脑子都是怎样修改traverse之法以求还原原tree。。然3ary比binary复杂的多，
+两个traversal根本无法define一个3ary tree。
+绕了一大圈后才开始想number nodes啊用symbol表示connection尔尔。。然后人生初面就如此一败涂地了。
+
+
+27.
+detect a loop in binary tree
+follow up:如果已知90%情况下loop存在于前10 level of the tree.如何optimize.
 

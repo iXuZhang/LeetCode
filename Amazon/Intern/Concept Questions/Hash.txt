@@ -19,6 +19,7 @@ hashmap的insert 和 get 各自是什么复杂度
 
 Implementation of HashTable
 
+Hashtable (hash function, collision, use case)
 
  给你一个novel，输出单词出现的次数； 曰： hashmap，unordered_map； 
  follow up: 为什么用unordered_map不用map？ 曰：不需要排序； 

@@ -27,3 +27,7 @@ word searchII 也可以考虑 用trie a trie = digital tree = radix tree = prefi
 follow up, 一个合法的sudoku的边长有什么特点？（n必须是某个整数的平方）
 follow up, 把程序改成适合任意合法长度的sudoku。（也就是说不一定要填1-9，也可以是比如1-16,1-64什么的，随长度定）
 follow up, 把程序改成也可以判断有cell没填的sudoku是否valid。（只要已填的部分未重复就好）
+
+
+5.
+string permutation，给abc，打印出所有abc的组合，比如abc，acb，bac... 

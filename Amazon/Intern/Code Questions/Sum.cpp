@@ -19,9 +19,14 @@ follow up： 问duplicate怎么办（3，3，2，1，4） target = 5 要两个pa
 我说3 sum还是可以用前面2 sum的方法来求，然后问running time，这个题我觉得我没有解释清楚，
 觉得他是因为时间问题就说我知道你知道了，不用解释了。. 
 
+一道2sum，后面扩展成了3sum
 
 two sum of 10， two sum of target，返回true/false
 follow up: 返回下标
+
+
+2Sum, return all valid pairs (HashMap solution, sort and move towards middle solution)
+follow up: if there are duplicates
 
 2. 3sum
 

@@ -9,6 +9,12 @@ List3(videogames): foO@amazon.com, jason@amazon.com, annabel@amazon.com
 Output           : {}
 解法是用两个set 交换着存
 
+Write a function that will take in email lists and return a new email list that contains only the email addresses that existed in all lists. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+1: foo@amazon.com, bar@amazon.com
+2: bar@amazon.com, bar@amazon.com
+o: bar@amazon.com
+
+
 2.Given a ransom note and a newspaper, write a Boolean function 
 to determine if the ransom note could be built from the words in the newspaper. 
 Assume that both the note and the newspaper are provided as 
@@ -32,6 +38,7 @@ follow up: 那hash的最坏情况下是多少？ 曰：说最坏的话要看coll
 加了一个大背景 我有一本字典 怎么找到所有anagram然后输出
 会问你function interface是什么 最后追问时间复杂度
 
+2个string, 第一个是否能够construct第二个
 
 6. Anagram
 0. 判断一个string是不是另外一个string的permutation
@@ -109,3 +116,8 @@ res = Math.min(Math.abs(index1 - index2), res);
 
 
 13.Merge K sorted array
+
+
+14.他说是一个String,比如 "I have a dream and dream."。
+后来我们的讨论卡住了，他说好吧，降低难度，去掉了句尾的标点符号，又接着开始扯怎么用西加加实现。
+word有任意多个字母组成，一个string也有任意多个words

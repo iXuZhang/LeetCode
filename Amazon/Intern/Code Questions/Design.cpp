@@ -52,7 +52,12 @@ Animal做abstract class
 然后Bird， Mammal 继承Animal
 然后Mocking Bird 继承了Bird. Waral 鍗氬鏈夋洿澶氭枃绔�,
 Bird类implement了一个Fly的Interface （这里被调侃了，他说企鹅怎么办。。企鹅是bird但是不会飞，当时有点尴尬。。就说我不知道）
-面试官会让你边设计边在里面添加一些方法和变量，比如Animal可以有weight，habitat什么的~bird可以有羽毛，颜色，飞行姿势等等. 
+面试官会让你边设计边在里面添加一些方法和变量，比如Animal可以有weight，habitat什么的~bird可以有羽毛，颜色，飞行姿势等等.
+
+一个游戏场景里有很多cat，dog，fish，bird等等动物，怎么设计类。这题比较自由，任何合理的设计都是可以的。
+我提到了abstract class，polymorphism，factory pattern，等等。这种开放题就要尽量show出你的OO Design知识
+
+11 计一个wallet，聊聊要什么方法，中间还问了几个 java问题 Abstarct class和 Interface区别啥的 
 
 
 

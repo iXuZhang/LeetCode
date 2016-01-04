@@ -2,7 +2,7 @@ Linked List
 
 1.说一个node list， 输入(int n , Node head) 求倒数第n个node的val
 2.find the last element of a linked-list
-3.merge two sorted list
+3.merge two sorted list merge两个sorted linked list。
 4.查环
 5.Leetcode 原题，swap nodes in a linked list in pairs
 6.reverse a linked list
@@ -15,3 +15,5 @@ follow up链表变成双链表.检查之前的节点 如果有交叉那么从其
 然后，followup如果中间值定义为第一个呢？
 10.链表倒数第三个
 11.delete a node in a circular singly linked list
+12.把一个linkedlist根据even, odd分成两个linked list, 不可创建new node. 考察linked list manipulation.
+13.coding：删除一个linkedlist里重复的节点

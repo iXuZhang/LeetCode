@@ -15,11 +15,18 @@
 有个数组长度是n，里面的元素是from 1 to n + 1， 貌似是一个元素少了，找出missing元素
 
 
+题目是给一个数组，找出连续的不出现重复数字的连续复子数组的最大长度，和字母那差不多。
+就像[5 6 4 5 1 2 3 7 8],最大长度就是6，这样的。然后follow up说不能用额外的空间，
+lz在他的提示之下， 求了数组相邻元素的差，然后寻找连续和为0的那么一片，
+编完了他来了个that's good. 但后来一想这方法完全就是个bug，不能确保中间没重复的，不知道这三哥哥怎么回事。
+
 triangle，求max sum Leetcode原题Triangle. 不过这里是返回最大数. 
 
 说是fizzbuzz game，之前没做过，突然感觉不对，
 然后听他解释规则说，给定n，输出1..n，如果是3的倍数打印fizz,5的倍数打印buzz，15的倍数打印fizzbuzz，
 否则输出原来的数字。。
+
+找出m和n之间的所有prime number，如何设计test case。
 
 
 小哥给了一个NODE(不是树的，是图)的API，input一个node的SET 返回一个BOOLEAN， 所有的SET里的NODE，是否是连接的图。
@@ -28,7 +35,12 @@ triangle，求max sum Leetcode原题Triangle. 不过这里是返回最大数.
 
 用2个heap求median，
 
+compare version number
+
 Min in rotated sorted array
+
+一个是三角形的数据结构，找从顶向下的最长路径，我说用DP写，面试官还不愿意，让用普通的方法解，所以我就直接用dfs解了
+。。最后又写了一道next permutation。
 
 
 Shuffle card

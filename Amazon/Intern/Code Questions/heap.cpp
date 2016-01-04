@@ -39,3 +39,19 @@ follow up: 把输入的数组改为iterator
 7.浩瀚的宇宙如此美丽，天空中繁星点点。给你一堆星星，找到离地球最近的那K颗。”（没错，他当时就是这样问我的，
 问一个 top K elements 要不要这么浮夸…）
 用的 max heap，
+
+
+8.
+第一题是给一个Integer数组，求maximum。。。
+直接回答先sort，然后得到答案，报runtimeO(nlgn)。。然后说这样慢了，可以O(n),就是one-pass，然后找到最大值。。面试官说好。。没让写代码。
+follow-up：怎么得到Top k value。。。。
+我说还是可以先sort。。然后取前k个。。报runtimeO(nlgn)。。。然后说太慢了，可以维护一个size是k的min-heap解决。。让写code。。磨蹭了两下写完烙印觉得还行就说过了。。看下一题
+第二题是同样一个Integer数组。。怎么得到max value和min value。。
+我也是醉了。。先说sort，慢，所以可以弄两个变量max和min，
+然后one-pass解决。。烙印说好，但是comparison是2n，问怎么改进。。
+当时一直没想出来，跟他讨论了半天，
+最后他提示说可以一次读2个数，然后终于想出来每次读取只需要比较3次就能得出max和min，
+这样total comparison是3n/2。。总算是符合了他的要求。。不过讨论和想花了挺多时间的，
+最后有些超时，随便问了个问题结束。。求过啊。。。
+
+

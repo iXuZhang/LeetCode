@@ -16,3 +16,6 @@ Tree
 
 
 differences between a graph and tree
+
+
+binary tree的特点（不是BST）

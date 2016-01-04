@@ -5,3 +5,10 @@ stack 中可以O(1)内get min, get max，很普通的题。
 
  implement set of stacks
  CC150中的一个题目
+
+min stack
+
+
+
+
+5. 设计一个有max, min操作的stack，cci原题

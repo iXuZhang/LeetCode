@@ -18,6 +18,7 @@ intersection
 
 两个数组里找相同ID（duplicate问题）
 
+找两个array的intersection，然后怎么处理有duplicate的情况
 
 2.给两个set，返回一个SET包含第一个SET里第二个没有的 和第二个SET里第一个没有的。
 

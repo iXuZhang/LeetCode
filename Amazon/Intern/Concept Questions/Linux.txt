@@ -15,3 +15,8 @@ Linux command 和文件操作相关的说了一下，主要靠find 和grep 怎�
  从所有的Http file中找手机号码，考察grep和regular expression
 
  第一个问题是在linux里面一大堆文件，要找文件里的东西－》我说用find命令找文件，cat打开文件，然后用regex匹配。
+
+
+ system design: hotel management system, online booking system
+data structure: hashmap & hashtable, bst
+other: regex, sorting algorithm

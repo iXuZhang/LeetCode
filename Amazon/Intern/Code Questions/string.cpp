@@ -13,3 +13,4 @@ LeetCode
 determine a string is palindrome
 9. get the longest palindrome substring
 10. string2int
+11.string转换成binary
