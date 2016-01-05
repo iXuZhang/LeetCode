@@ -17,3 +17,10 @@ follow up链表变成双链表.检查之前的节点 如果有交叉那么从其
 11.delete a node in a circular singly linked list
 12.把一个linkedlist根据even, odd分成两个linked list, 不可创建new node. 考察linked list manipulation.
 13.coding：删除一个linkedlist里重复的节点
+检查两个linkedlist是否有交点 如果有 return交点
+
+
+1.给一个single linked list找到中间的元素
+2.给一个single linked list找到kth to last元素
+3.在一个binary tree中，找到两个node的公共祖先。然后继续问，如果node有一个pointer指向parent， 要求空间O（1）
+4.有一个unsorted int array有100个元素， 每个元素都是1到100之间的，如果有重复的元素， 把它找出来。（不能修改数组，空间O（1））。。。。

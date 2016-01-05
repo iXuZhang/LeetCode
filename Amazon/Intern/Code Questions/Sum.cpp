@@ -14,10 +14,20 @@ follow up： 问duplicate怎么办（3，3，2，1，4） target = 5 要两个pa
 我要换成别的存，要hashmap，他说我正想说这个下一个
 
 
+2 sum.
+楼主先说了一个harshtable的方法，是O(n).然后三哥表示有没有用的空间少一点，速度可以慢一点的方法。
+在三哥的提醒下，楼主说出了loop+binary search的方法，然后说是o(nlogn
+
+
+给一个array，找出所有 pairs that can be summed up to 10.. 就是2 sum的变种
+
 后来就开始问不要additional data structure的解法，答用两个指针一前一后，遍历，
 他都没听完就开始问running time然后就开始问3 sum，
 我说3 sum还是可以用前面2 sum的方法来求，然后问running time，这个题我觉得我没有解释清楚，
 觉得他是因为时间问题就说我知道你知道了，不用解释了。. 
+
+第二题是给定一个数组，求和为某个定值的两个元素，后来follow是如果是[2 2 5 5]这种有重复的，和为7，要输出4次，
+再然后还要考虑像[5 5 5 5],和为10这样的情况。总之脑子有些乱，在她的提示下还算勉强完成了
 
 一道2sum，后面扩展成了3sum
 

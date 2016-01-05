@@ -9,23 +9,15 @@ Design
 
 2. design a parking lot系统
 
-
-
 3. desgin a 自动售货机
-
-
 
 4.你一个用户ID，一个函数返回ID的朋友列表，一个函数返回ID买过的商品。让你设计给这个用户推荐商品。
 记得考虑要加上用户自己买过的商品就行了，follow up还说了利用年龄、区域类的进行优化。
 
-
-
 5.写个colorPoint类，里面要有equals方法，判断两个colorPoint是不是equals, 
 follow up是参数改为Object，判断是不是equals。要先判断Object的class （特别是colorPoint的derived class）
 
-
 6.设计题，问interface是什么意思，然后设计一个Deck类
-
 
 5.Design BlackJack Card Game
 BlackJack Game
@@ -40,11 +32,12 @@ pocket cards design
 7.说有一个retailer,想keep record顾客的喜好，三个class，teacher, student, mother,然后让设计class。
 还加问了一个如果想给既是teacher又是mother的人给个discount怎么设计
 
-
 8.餐馆预约系统 
 
+设计一个hotel的设计
+system design: hotel management system, online booking system
 
-9 app to track busses and busstops in a city
+9 track busses and busstops in a city
 
 10 设计动物园(animal kingdom)
 时间有限，没有太多细节
@@ -57,7 +50,8 @@ Bird类implement了一个Fly的Interface （这里被调侃了，他说企鹅怎
 一个游戏场景里有很多cat，dog，fish，bird等等动物，怎么设计类。这题比较自由，任何合理的设计都是可以的。
 我提到了abstract class，polymorphism，factory pattern，等等。这种开放题就要尽量show出你的OO Design知识
 
-11 计一个wallet，聊聊要什么方法，中间还问了几个 java问题 Abstarct class和 Interface区别啥的 
-
-
+11 计一个wallet，聊聊要什么方法，
+中间还问了几个 java问题 Abstarct class和 Interface区别啥的 
+class和object的区别， 什么是inheritance
+不写代码，口头讲思路，比如会有哪个几class，每个class有些什么成员变量和函数
 

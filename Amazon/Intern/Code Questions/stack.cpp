@@ -12,3 +12,8 @@ min stack
 
 
 5. 设计一个有max, min操作的stack，cci原题
+
+
+如何用两个Stack实现一个Queue。
+
+如何用queue实现stack

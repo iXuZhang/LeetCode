@@ -27,6 +27,8 @@ and that each newspaper word can only be used once.
 写了一个暴力枚举，然后follow up => 提高效率， HashMap。
 
 
+输出一个句子中每个单词的频率，楼主简单说了说思路，用哈希表，问了我哈希表的insert和search的runtime以及search的工作原理。最后让我问了俩问题结束
+
 4.给你一个novel，输出单词出现的次数； 曰： hashmap，unordered_map； 
 follow up 为什么用unordered_map不用map？ 曰：不需要排序； 
 follow up:时间复杂度多少？hash的O(1)， 题目O(n)；
@@ -121,3 +123,8 @@ res = Math.min(Math.abs(index1 - index2), res);
 14.他说是一个String,比如 "I have a dream and dream."。
 后来我们的讨论卡住了，他说好吧，降低难度，去掉了句尾的标点符号，又接着开始扯怎么用西加加实现。
 word有任意多个字母组成，一个string也有任意多个words
+
+
+15.
+给一个array of int 然后给一个sub array的size 
+要求求出所有sub array的平均值 然后return出现次数最多的平均数的大小和出现次数 

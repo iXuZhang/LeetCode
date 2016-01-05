@@ -116,7 +116,30 @@ How do you serialize a 3-ary tree?
 绕了一大圈后才开始想number nodes啊用symbol表示connection尔尔。。然后人生初面就如此一败涂地了。
 
 
+
+
 27.
 detect a loop in binary tree
 follow up:如果已知90%情况下loop存在于前10 level of the tree.如何optimize.
+
+28.
+given a binary tree, print the level number which has maximum number of nodes
+
+29.
+Write a function that takes in a value and a node 
+which is assumed to be the root of a BST and inserts into the BST
+
+30.
+是给两个key 在一个BST中找出这两个key对应节点的距离(确保两个key都在bst里面) 这题麻烦一点 开始想用parent指针 才写了一行面试官就说只有left child和right child 大概想了半分钟 然后开始写code 根据查找的节点和key1以及key2的大小关系 分三种情况递归就行 写完以后给面试官讲完思路 他说时间到了没法go deeper 就问我还有啥问题没 就结束了
+
+
+(1) Find lowest common ancestor in Binary tree. What is the complexity of running time and space?
+
+(2) Find lowest common ancestor in BST tree. What is the complexity of running time and space?
+
+(3) How can you reduce the time complexity of finding the LCA?
+
+第一题写BST的insert,level orther printing, zig zag tree printing
+
+
 
