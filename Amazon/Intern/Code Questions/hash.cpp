@@ -14,6 +14,7 @@ Write a function that will take in email lists and return a new email list that 
 2: bar@amazon.com, bar@amazon.com
 o: bar@amazon.com
 
+字符串A和B 找出在A中出现也在B中出现了的字符
 
 2.Given a ransom note and a newspaper, write a Boolean function 
 to determine if the ransom note could be built from the words in the newspaper. 
@@ -107,9 +108,11 @@ res = Math.min(Math.abs(index1 - index2), res);
 11.
 1-1000个数放到一个size为1000的array，怎么判断有没有duplication。我说了三个方法。
 然后开始follow up，说不用hashmap 让我只用Array做这个题，我才理解是让我用array代替hashmap
-然后又开始follow up，说如果是1-10billon 怎么办，内存不够。
+然后又开始follow up，说如果是 1-10billon 怎么办，内存不够。
 我突然明白他了，就说用bitset来做。他说对，然后又问用bitset需要多少空间。
-傻逼了，算错了应该是40/32. 楼主算成4/32, 被印度哥鄙视了，他说10个billlon int 是40个GB，
+傻逼了，算错了应该是40/32. 楼主算成4/32, 被印度哥鄙视了，他说10个billlon int 是40个GB
+
+the size of the bit map is 10 billion bit = 1.25 billion byte = 1.25 GB
 1GB = 1 billion byte
  
 
