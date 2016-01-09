@@ -39,6 +39,12 @@ follow up: 返回下标
 follow up: if there are duplicates
 
 2. 3sum
+3Sum 
+刚开始没说选3个求和，所以我特么写了DFS版本 T_T 然后他开始走DFS，走了很久，他说你能写不递归方式么。我想这种暴力枚举写非递归好难，难道你只要求3Sum，所以求证了一下，果然是3Sum!
+
+然后先写了暴力的3重循环，要求优化. from: 1point3acres.com/bbs 
+写了用HashTable的，再优化
+写了Sort后用Two Pointers，哦，不错，这个最好. 鐗涗汉浜戦泦
 
 3.给一个array，一个target，返回这个array能不能pair成target的boolean值.
 

@@ -1,4 +1,5 @@
 1. LeetCode binary tree level order travesal
+Binary Tree Level Order Traversal变体，加了实际应用背景。
 2. LeetCode Invert Binary Tree
 3. Convert a BST to a Binary Tree such that sum of all greater keys is added to every key
 	http://www.geeksforgeeks.org/convert-bst-to-a-binary-tree/

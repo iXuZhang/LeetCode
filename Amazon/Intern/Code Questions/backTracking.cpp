@@ -31,3 +31,7 @@ follow up, 把程序改成也可以判断有cell没填的sudoku是否valid。（
 
 5.
 string permutation，给abc，打印出所有abc的组合，比如abc，acb，bac... 
+
+
+
+Q1 number of island 一维版本

@@ -36,3 +36,7 @@ follow up3: 问我那n为负数怎么办，然后我就又加了个if statement
 我说写个函数算出第一个大于等于该数的fibonacci数，如果是等于就是，大于就不是。
 
 5.就是给一个MxN的矩阵，有一个robot从左上角要走到右下角
+
+Compute number and print all possible paths from (0,0) to (7,7) in a chess board. 
+you can either move down or right . 
+basically in first interview they either ask about red black, avl , trees or some question based on design and analysis of algorithms. mine was based on dynamic programming

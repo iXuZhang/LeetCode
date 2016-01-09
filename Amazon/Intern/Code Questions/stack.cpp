@@ -17,3 +17,6 @@ min stack
 如何用两个Stack实现一个Queue。
 
 如何用queue实现stack
+
+
+括号是否匹配 一种括号版本和三中括号版本
