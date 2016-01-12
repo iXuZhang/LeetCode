@@ -1,9 +1,5 @@
 /*
 Two sum
-输出有效的number pair的对数，输入的数组里有重复，输出的不能有重复，
-给定sum是9，（3,6）和（6,3）是一样的
-给定sum是12，(6,6)只算一次只要一个
-输入(3,3,3,3,3,3,6) sum = 6，返回1
 */
 
 #include <iostream>
@@ -12,22 +8,72 @@ Two sum
 
 using namespace std;
 
-
-int twoSum(vector<int>& input, int target){
+// result do not have duplicate
+// 如果是[2 2 5 5]这种有重复的，和为7，要输出1次
+vector<pair<int,int>> twoSum1(vector<int>& input, int target){
+	vector<pair<int,int>> res;
 	unordered_map<int,int> table;
 	for(int num : input) table[num]++;
-	int count = 0;
 	for(auto i = table.begin(); i != table.end(); ++i){
-		if(table.count(target - i->first) > 0){
-			if(target - i->first != i->first) count++;
-			if(target - i->first == i->first && i->second > 1) count += 2;
+		if(i->first <= target/2 && table.count(target - i->first) > 0){
+			if(target - i->first != i->first) res.push_back(make_pair(i->first, target-i->first));
+			if(target - i->first == i->first && i->second > 1) res.push_back(make_pair(i->first,i->first));
 		}
 	}
-	return count/2;
+	return res;
+}
+
+int factorial(int x){
+	if (x == 0 || x == 1) return 1;
+	return x*factorial(x-1);
+}
+
+// Result have dulicate
+// 如果是[2 2 5 5]这种有重复的，和为7，要输出4次
+// [5 5 5 5],和为10, 要输出（4-1)！= 6次
+vector<pair<int,int>> twoSum2(vector<int>& input, int target){
+	vector<pair<int,int>> res;
+	unordered_map<int,int> table;
+	for(int num : input) table[num]++;
+	for(auto i = table.begin(); i != table.end(); ++i){
+		if(i->first <= target/2 && table.count(target - i->first) > 0){
+			if(target - i->first != i->first){
+				int count = table[target - i->first]*table[i->first];
+				while(count--)res.push_back(make_pair(i->first, target-i->first));
+			}
+			if(target - i->first == i->first && i->second > 1){
+				int count = factorial(table[i->first]-1);
+				while(count--) res.push_back(make_pair(i->first,i->first));
+			} 
+		}
+	}	
+	return res;
+}
+
+
+// Sort + two pointer
+vector<pair<int,int>> twoSum3(vector<int>& input, int target){
+	vector<pair<int,int>> res;
+	sort(input.begin(), input.end());
+    int left = 0;
+    int right = input.size() - 1;
+    while(left < right){
+    	if(input[left] + input[right] == target){
+    		res.push_back(make_pair(input[left],input[right]));
+    		while(left + 1 < right && input[left] == input[left+1]) left++;
+    		left++;
+    	} 
+    	else if(input[left] + input[right] < target) left++;
+    	else right--;
+    }
+	return res;
 }
 
 int main(){
-	vector<int> input = {3,3,3,3,3,3,6,2,2,4,4};
-	cout << twoSum(input, 6) << endl;
+	vector<int> input = {2, 2, 5, 5};
+	vector<int> input2 = {5, 5, 5, 5};
+	vector<pair<int,int>> res = twoSum3(input, 7);
+	for(auto p : res)
+		cout << p.first <<" "<< p.second<<endl;
 	return 0;
 }
