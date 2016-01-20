@@ -1,27 +1,27 @@
-// Fraction to Recurring Decimal
+//Fraction to Recurring Decimal
 class Solution {
 public:
     string fractionToDecimal(int numerator, int denominator) {
-        long num = numerator;
-        long den = denominator;
+        if(!numerator) return "0";
+        if(!denominator) throw invalid_argument("denominator can not be 0");
         string res;
-        if(num * den < 0) res += "-";
-        if(num < 0) num = -num;
-        if(den < 0) den = -den;
-        res += to_string(num/den); //-2147483648 -1
-        long rem = num % den;
-        if(rem == 0) return res;
+        if(numerator > 0 ^ denominator > 0) res += '-';
+        long x = labs(numerator);
+        long y = labs(denominator);
+        res += to_string(x/y);
+        if(x%y == 0) return res;
+        res += '.';
         unordered_map<int,int> table;
-        res += ".";
-        int i = res.size();
-        while(rem != 0 && table.count(rem) == 0){
-            table[rem] = i++;
-            res += to_string(rem*10/den);
-            rem = rem*10%den;
-        }
-        if(rem != 0){
-            res.insert(table[rem], "(");
-            res +=  ")";
+        long r = x%y;
+        while(r != 0){
+            if(table.count(r) > 0){
+                res.insert(res.begin() + table[r],'(');
+                res += ')';
+                return res;
+            }
+            table[r] = res.size();
+            res += to_string(10*r/y);
+            r = 10*r%y;
         }
         return res;
     }

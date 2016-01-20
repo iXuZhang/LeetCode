@@ -1,75 +1,72 @@
 // LRU Cache
-class DListNode{
-public:
-    int key;
-    int val;
-    DListNode* prev;
-    DListNode* next;
-    DListNode(int x, int y){
-        key = x;
-        val = y;
-        prev =  next = NULL;
-    }
-};
-
 class LRUCache{
 public:
+    struct DListNode{
+        int key;
+        int val;
+        DListNode* prev;
+        DListNode* next;
+        DListNode(int x, int y): key(x), val(y), prev(NULL), next(NULL){}
+    };
+    
     LRUCache(int capacity) {
         size = capacity;
-        head = tail = NULL;
-        count = 0;
+        head = NULL;
+        tail = NULL; // important
     }
     
     int get(int key) {
-        cout << key << " get "<< endl;
-        if(!cache.count(key)) return -1;
+        if(table.count(key) == 0)
+            return -1;
+        int value = table[key]->val;
         update(key);
-        return cache[key]->val;
+        return value;
     }
     
     void set(int key, int value) {
-        if(cache.count(key) > 0){
+        if(table.count(key)){
             update(key);
-            cache[key]->val = value;
+            table[key]->val = value;
             return;
         }
-        count++;
         DListNode* node = new DListNode(key, value);
-        cache[key] = node;
-        if(!head) head = node;
+        table[key] = node;
+        if(!head){
+            head = node;
+            tail = node;
+        }
         else{
-            tail->next = node;
-            node->prev = tail;
+            node->next = head;
+            head->prev = node;
+            head = node;
         }
-        if(count > size){
-            DListNode* temp = head;
-            head = head->next;
-            head->prev = NULL;
-            cache.erase(temp->key);
-            count--;
+        if(size > 0) size--;
+        else{
+            table.erase(tail->key);
+            tail = tail->prev;
+            tail->next = NULL;
         }
-        tail = node;
     }
     
     void update(int key){
-        DListNode* curr = cache[key];
-        if(count == 1 || curr == tail) return;
-        if(curr == head)
-            head = head->next;
+        DListNode* curr = table[key];
+        if(curr == head) return;
+        if(curr == tail){
+            tail = tail->prev;
+            tail->next = NULL;
+        }
         else{
             curr->prev->next = curr->next;
             curr->next->prev = curr->prev;
         }
-        tail->next = curr;
-        curr->prev = tail;
-        curr->next = NULL;
-        tail = curr;
+        curr->prev = NULL;
+        curr->next = head;
+        head->prev = curr;
+        head = curr;
     }
     
-private:
     DListNode* head;
     DListNode* tail;
-    unordered_map<int, DListNode*> cache;
-    int count;
     int size;
+    unordered_map<int, DListNode*> table;
 };
