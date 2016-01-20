@@ -1,41 +1,49 @@
 // Number of Islands II
 class Solution {
 public:
-    // union(A, B) - merge A's set with B's set
-    // find(A) - finds what set A belongs to
     vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
-        vector<vector<pair<int, int>>> table(m, vector<pair<int, int>>(n, make_pair(-1,-1)));
         vector<int> res;
-        int num = 0;
-        for(auto p : positions){
-            int i = p.first, j = p.second;
-            table[i][j] = make_pair(i, j);
-            num++;
-            pair<int, int> root;
-            root = findRoot(table, i + 1, j);
-            unionIslands(table, i, j, root.first, root.second, num);
-            root = findRoot(table, i - 1, j);
-            unionIslands(table, i, j, root.first, root.second, num);
-            root = findRoot(table, i, j + 1);
-            unionIslands(table, i, j, root.first, root.second, num);
-            root = findRoot(table, i, j - 1);
-            unionIslands(table, i, j, root.first, root.second, num);
-            res.push_back(num);
+        int count = 0;
+        vector<vector<Label*>> table(m,vector<Label*>(n, NULL));
+        for(pair<int,int> p : positions){
+            int i = p.first;
+            int j = p.second;
+            if(table[i][j]) continue;
+            count += 1;
+            table[i][j] = new Label(i,j, 1);
+            unionLabel(findLabel(table,i, j), findLabel(table,i+1, j), count);
+            unionLabel(findLabel(table,i, j), findLabel(table,i-1, j), count);
+            unionLabel(findLabel(table,i, j), findLabel(table,i, j+1), count);
+            unionLabel(findLabel(table,i, j), findLabel(table,i, j-1), count);
+            res.push_back(count);
         }
         return res;
     }
     
-private:
-    pair<int, int> findRoot(vector<vector<pair<int, int>>>& table, int i, int j){
-        if(i == table.size() || i < 0 || j == table[0].size() || j < 0 || table[i][j].first == -1) return make_pair(-1,-1);
-        if(i == table[i][j].first && j == table[i][j].second) return table[i][j];
-        else return findRoot(table, table[i][j].first, table[i][j].second);
+    struct Label{
+        int i;
+        int j;
+        int depth;
+        Label(int x, int y, int z): i(x), j(y), depth(z){}
+    };
+    
+    void unionLabel(Label* l1, Label* l2, int& count){
+        if(!l1 || !l2 || l1 == l2 ) return;
+        if(l1->depth >= l2->depth){
+            l2->i = l1->i;
+            l2->j = l1->j;
+            if(l1->depth == l2->depth) l1->depth++;
+        }
+        else{
+            l1->i = l2->i;
+            l1->j = l2->j;
+        }
+        count--;
     }
-
-private:
-    void unionIslands(vector<vector<pair<int, int>>>& table, int i1, int j1, int i2, int j2, int& num){
-        if(i2 == -1 || i1 == i2 && j1 == j2) return;
-        table[i2][j2] = make_pair(i1, j1);
-        num--;
+    
+    Label* findLabel(vector<vector<Label*>>& table, int i, int j){
+        if(i < 0||i >= table.size()||j < 0||j >= table[0].size()||!table[i][j]) return NULL;
+        if(table[i][j]->i == i && table[i][j]->j == j) return table[i][j];
+        else return findLabel(table, table[i][j]->i, table[i][j]->j);
     }
 };

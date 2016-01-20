@@ -3,23 +3,23 @@ class Solution {
 public:
     vector<string> wordBreak(string s, unordered_set<string>& wordDict) {
         vector<string> res;
-        int i = 0, n = s.size();
-        for(i = n - 1; i >= 0; i--)
-            if(wordDict.count(s.substr(i,n-i))) break;
-        if(i == -1) return res;
-        helper(s, wordDict, res, "", 0);
+        for(int j = s.size() - 1; j >= 0; j--){
+            if(wordDict.count(s.substr(j))) break;
+            else if(j == 0) return res;
+        }
+        backTracking(res, s, wordDict, "", 0);
         return res;
     }
     
-    void helper(string& s, unordered_set<string>& wordDict, vector<string>& res, string curr, int pos){
+    void backTracking(vector<string>& res, string s, unordered_set<string>& wordDict, string curr, int pos){
         if(pos == s.size()){
             curr.pop_back();
             res.push_back(curr);
             return;
         }
         for(int i = pos; i < s.size(); i++){
-            string temp = s.substr(pos, i - pos + 1);
-            if(wordDict.count(temp)) helper(s, wordDict, res, curr + temp + " ", i + 1);
+            string temp = s.substr(pos, i-pos+1);
+            if(wordDict.count(temp)) backTracking(res, s, wordDict, curr+temp+" ", i+1);
         }
     }
 };
