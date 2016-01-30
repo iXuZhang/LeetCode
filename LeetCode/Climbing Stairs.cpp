@@ -1,16 +1,16 @@
 //Climbing Stairs
 class Solution {
 public:
-    // res[i] = res[i-1] + res[i-2]
+    // res[i] = res[i-1] + res[i-2];
+    // 0, 1, 2, 3, 5    
     int climbStairs(int n) {
-       int res = 1;
-       int prev = 0;
-       while(n > 0) {
-           int temp = res;
-           res += prev;
-           prev = temp;
-           n --;
-       }
-       return res;
+        int prev = 0;
+        int curr = 1;
+        for(int i = 0; i < n; i++){
+            int temp = curr;
+            curr = curr + prev;
+            prev = temp;
+        }
+        return curr;
     }
-};
+};    
